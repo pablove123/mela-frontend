@@ -8,6 +8,7 @@ import Login from './pages/Login/Login'
 import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
+import Games from './pages/Games/Games'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -56,6 +57,22 @@ const App = () => {
         />
         <Route
           path="/change-password"
+          element={
+            <ProtectedRoute user={user}>
+              <ChangePassword handleSignupOrLogin={handleSignupOrLogin} />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/games"
+          element={
+            <ProtectedRoute user={user}>
+              <Games />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/moods"
           element={
             <ProtectedRoute user={user}>
               <ChangePassword handleSignupOrLogin={handleSignupOrLogin} />
