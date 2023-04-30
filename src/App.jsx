@@ -9,6 +9,7 @@ import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import Games from './pages/Games/Games'
+import Moods from './pages/Moods/Moods'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -75,7 +76,7 @@ const App = () => {
           path="/moods"
           element={
             <ProtectedRoute user={user}>
-              <ChangePassword handleSignupOrLogin={handleSignupOrLogin} />
+              <Moods/>
             </ProtectedRoute>
           }
         />
