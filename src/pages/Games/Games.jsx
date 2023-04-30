@@ -7,7 +7,7 @@ const Games = (props) => {
       <h1>Games List</h1>
       <p><GameCard/></p>
     </>
-    
+
     );
 }
 

@@ -1,7 +1,13 @@
+import MoodCard from "../../components/MoodCard/MoodCard";
+import GameCard from "../../components/GameCard/GameCard";
 
-
-const Moods = (Moods) => {
-  return ( <h1>This is Mood List</h1> );
+const Moods = (props) => {
+  return ( 
+    <>
+      <h1>This is Moods List</h1>
+      <p><MoodCard/></p>
+    </>
+    );
 }
 
 export default Moods;
