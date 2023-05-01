@@ -10,6 +10,7 @@ import Profiles from './pages/Profiles/Profiles'
 import ChangePassword from './pages/ChangePassword/ChangePassword'
 import Games from './pages/Games/Games'
 import Moods from './pages/Moods/Moods'
+import NewEntry from './pages/NewEntry/NewEntry'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -77,6 +78,14 @@ const App = () => {
           element={
             <ProtectedRoute user={user}>
               <Moods/>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/moods/entry"
+          element={
+            <ProtectedRoute user={user}>
+              <NewEntry/>
             </ProtectedRoute>
           }
         />
