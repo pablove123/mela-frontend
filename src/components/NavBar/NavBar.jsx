@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import styles from './NavBar.module.css'
 
 const NavBar = ({ user, handleLogout }) => {
   return (
@@ -7,15 +8,15 @@ const NavBar = ({ user, handleLogout }) => {
         <ul>
           <li>Welcome, {user.name}</li>
           {/* <li><Link to="/profiles">Profiles</Link></li> */}
-          <li><Link to="" onClick={handleLogout}>LOG OUT</Link></li>
+          <li><Link className={styles.NavLink} to="" onClick={handleLogout}>LOG OUT</Link></li>
           {/* <li><Link to="/change-password">Change Password</Link></li> */}
-          <li><Link to="/games">Games</Link></li>
-          <li><Link to="/moods">Mood Tracker</Link></li>
+          <li><Link className={styles.NavLink} to="/games">Games</Link></li>
+          <li><Link className={styles.NavLink} to="/moods">Mood Tracker</Link></li>
         </ul>
       :
         <ul>
-          <li><Link to="/login">Log In</Link></li>
-          <li><Link to="/signup">Sign Up</Link></li>
+          <li><Link className={styles.NavLink} to="/login">Log In</Link></li>
+          <li><Link className={styles.NavLink} to="/signup">Sign Up</Link></li>
         </ul>
       }
     </nav>

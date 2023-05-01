@@ -1,0 +1,10 @@
+.NavLink{
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  width: 100%;
+  list-style: none;
+  font-weight: bold;
+  align-items: center;
+  margin-right: 35px;
+}
