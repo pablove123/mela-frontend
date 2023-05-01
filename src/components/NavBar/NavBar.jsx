@@ -9,9 +9,9 @@ const NavBar = ({ user, handleLogout }) => {
           {/* <li><Link to="/profiles">Profiles</Link></li> */}
           <li><Link className={styles.NavLink} to="" onClick={handleLogout}>LOG OUT</Link></li>
           {/* <li><Link to="/change-password">Change Password</Link></li> */}
-          <li><Link className={styles.NavLink} to="/games">Games</Link></li>
+          {/* <li><Link className={styles.NavLink} to="/games">Games</Link></li>
           <li><Link className={styles.NavLink} to="/moods">Mood Tracker</Link></li>
-          <li><Link className={styles.NavLink} to="/">Home</Link></li>
+          <li><Link className={styles.NavLink} to="/">Home</Link></li> */}
         </ul>
       :
         <ul>

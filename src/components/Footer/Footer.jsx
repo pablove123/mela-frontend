@@ -6,9 +6,11 @@ const Footer = ({ user, handleLogout }) => {
     <nav>
       {user ?
         <ul>
-          <li><Link className={styles.NavLink} to="/games">Games</Link></li>
-          <li><Link className={styles.NavLink} to="/moods">Mood Tracker</Link></li>
-          <li><Link className={styles.NavLink} to="/">Home</Link></li>
+          <div className={styles.foot}>
+            <Link className={styles.Games} to="/games">Games</Link>
+            <Link className={styles.NavLink} to="/moods">Mood Tracker</Link>
+            <Link className={styles.NavLink} to="/">Home</Link>
+          </div>
         </ul>
       :
         <ul>

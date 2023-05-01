@@ -1,0 +1,17 @@
+.games{
+  list-style: none;
+}
+
+ul{
+  list-style-type: none;
+  color: red;
+}
+li{
+  list-style-type: none;
+}
+.foot{
+  color: red;
+  display: flex;
+  justify-content: space-around;
+  margin-left:-20px;
+}
