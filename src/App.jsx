@@ -11,6 +11,7 @@ import ChangePassword from './pages/ChangePassword/ChangePassword'
 import Games from './pages/Games/Games'
 import Moods from './pages/Moods/Moods'
 import NewEntry from './pages/NewEntry/NewEntry'
+import Footer from './components/Footer/Footer'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -90,6 +91,7 @@ const App = () => {
           }
         />
       </Routes>
+      <Footer user={user}/>
     </>
   )
 }
