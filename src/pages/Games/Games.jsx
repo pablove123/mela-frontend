@@ -5,6 +5,8 @@ const Games = (props) => {
   return (
     <>
       <h1>Games List</h1>
+      <p><button><a href="/games/ttt">TicTacToe</a></button></p>
+      <p><button><a href="/games/guess">Guess The Number</a></button></p>
       <p><GameCard/></p>
     </>
 
