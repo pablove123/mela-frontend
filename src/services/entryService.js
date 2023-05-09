@@ -51,7 +51,7 @@ const update = async (entryData) => {
   }
 }
 
-const deleteExperience = async (id) => {
+const deleteEntry = async (id) => {
   try {
     const res = await fetch(`${BASE_URL}/${id}`, {
       method: 'DELETE',
@@ -69,5 +69,6 @@ export{
   getAllEntries, 
   create, 
   show, 
-  update
+  update, 
+  deleteEntry
 }

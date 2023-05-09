@@ -47,6 +47,12 @@ const App = () => {
     navigate(`/moods`)
   }
 
+  const handleDeleteEntry = async (id) => {
+    const deletedEntry = await entryService.deleteEntry(id)
+    setEntry(entries.filter(b => b._id !== deletedEntry._id))
+    navigate('/moods')
+  }
+
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
@@ -88,7 +94,7 @@ const App = () => {
           path="/moods"
           element={
             <ProtectedRoute user={user}>
-              <Moods/>
+              <Moods handleDeleteEntry={handleDeleteEntry} />
             </ProtectedRoute>
           }
         />
