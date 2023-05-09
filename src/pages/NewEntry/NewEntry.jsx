@@ -3,7 +3,7 @@ import styles from './NewEntry.module.css'
 
 const NewEntry = (props) => {
   const [form, setForm] = useState({
-    feeling: '',
+    feeling: 'Happy',
     game: '',
     comment: '',
   })
@@ -13,7 +13,7 @@ const NewEntry = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    props.handleAddExperience(form)
+    props.handleAddMoodEntry(form)
   }
 
   return ( 

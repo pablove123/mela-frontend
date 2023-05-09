@@ -21,6 +21,7 @@ import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 
 // services
 import * as authService from './services/authService'
+import * as entryService from './services/entryService'
 
 // styles
 import './App.css'
@@ -28,6 +29,7 @@ import './App.css'
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
   const navigate = useNavigate()
+  const [entries, setEntry] = useState([])
 
   const handleLogout = () => {
     authService.logout()
@@ -37,6 +39,12 @@ const App = () => {
 
   const handleSignupOrLogin = () => {
     setUser(authService.getUser())
+  }
+
+  const handleAddMoodEntry = async (entryData) => {
+    const newEntry = await entryService.create(entryData)
+    setEntry([newEntry, ...entries])
+    navigate(`/moods`)
   }
 
   return (
@@ -88,7 +96,7 @@ const App = () => {
           path="/moods/entry"
           element={
             <ProtectedRoute user={user}>
-              <NewEntry/>
+              <NewEntry handleAddMoodEntry={handleAddMoodEntry}/>
             </ProtectedRoute>
           }
         />
