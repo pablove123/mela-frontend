@@ -4,7 +4,7 @@ const TTT = (props) => {
   return ( 
   <>
   <h1>Tic-Tac-Toe</h1>
-	<h2 id="message">Message</h2>
+
 	<h3>Click a square:</h3>
 
 	<section class="board">
