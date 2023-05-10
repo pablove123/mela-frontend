@@ -8,6 +8,28 @@ async function getAllEntries() {
   return await res.json()
 }
 
+// const getAllEntries = async ()=> {
+//   try {
+//     const res = await fetch(BASE_URL, {
+//       headers: { 'Authorization': `Bearer ${tokenService.getToken()}` },
+//     })
+//     return res.json()
+//   } catch (error) {
+//     console.log(error)
+//   }
+// }
+
+const show = async (id) => {
+  try {
+    const res = await fetch(`${BASE_URL}/${id}`, {
+      headers: { 'Authorization': `Bearer ${tokenService.getToken()}` },
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 const create = async (entryData) => {
   try{
     const res = await fetch(BASE_URL, {
@@ -24,16 +46,6 @@ const create = async (entryData) => {
   }
 }
 
-const show = async (id)=> {
-  try {
-    const res = await fetch(`${BASE_URL}/${id}`, {
-      headers: { 'Authorization': `Bearer ${tokenService.getToken()}` },
-    })
-    return res.json()
-  } catch (error) {
-    console.log(error)
-  }
-}
 
 const update = async (entryData) => {
   try {
@@ -59,6 +71,7 @@ const deleteEntry = async (id) => {
         'Authorization': `Bearer ${tokenService.getToken()}`
       }
     })
+    console.log("working")
     return res.json()
   } catch (error) {
     console.log(error)
@@ -70,5 +83,5 @@ export{
   create, 
   show, 
   update, 
-  deleteEntry
+  deleteEntry, 
 }

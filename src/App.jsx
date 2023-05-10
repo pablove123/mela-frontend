@@ -1,6 +1,7 @@
 // npm modules
 import { useState } from 'react'
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom'
+import { useEffect } from 'react'
 
 // page components
 import Signup from './pages/Signup/Signup'
@@ -40,6 +41,14 @@ const App = () => {
   const handleSignupOrLogin = () => {
     setUser(authService.getUser())
   }
+
+  useEffect(()=>{
+    const fetchAllEntries = async ()=> {
+      const data = entryService.getAllEntries()
+      setEntry(data)
+    }
+    if (user) fetchAllEntries()
+  }, [user])
 
   const handleAddMoodEntry = async (entryData) => {
     const newEntry = await entryService.create(entryData)
@@ -94,7 +103,8 @@ const App = () => {
           path="/moods"
           element={
             <ProtectedRoute user={user}>
-              <Moods handleDeleteEntry={handleDeleteEntry} />
+              <Moods 
+              handleDeleteEntry={handleDeleteEntry} entries={entries} />
             </ProtectedRoute>
           }
         />
