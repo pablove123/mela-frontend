@@ -32,6 +32,7 @@ const App = () => {
   const navigate = useNavigate()
   const [entries, setEntry] = useState([])
 
+
   const handleLogout = () => {
     authService.logout()
     setUser(null)
@@ -42,11 +43,13 @@ const App = () => {
     setUser(authService.getUser())
   }
 
-  useEffect(()=>{
-    const fetchAllEntries = async ()=> {
-      const data = entryService.getAllEntries()
+
+
+  useEffect(() => {
+    const fetchAllEntries = async () => {
+      const data = await entryService.getAllEntries()
       setEntry(data)
-    }
+    } 
     if (user) fetchAllEntries()
   }, [user])
 
