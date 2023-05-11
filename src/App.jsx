@@ -64,10 +64,11 @@ const App = () => {
     setEntry(entries.filter(b => b._id !== deletedEntry._id))
     navigate('/moods')
   }
-
+  
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
+    <Footer user={user}/>
       <Routes>
         <Route path="/" element={<Landing user={user} />} />
         <Route
@@ -136,7 +137,6 @@ const App = () => {
           }
         />
       </Routes>
-      <Footer user={user}/>
     </>
   )
 }
