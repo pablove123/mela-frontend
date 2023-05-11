@@ -15,6 +15,7 @@ import NewEntry from './pages/NewEntry/NewEntry'
 import Footer from './components/Footer/Footer'
 import TTT from './pages/TicTacToe/TicTacToe'
 import Guess from './pages/GuessTheNumber/GuessTheNumber'
+import HandMan from './pages/HangMan/HangMan'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -125,6 +126,14 @@ const App = () => {
           element={
             <ProtectedRoute user={user}>
               <TTT/>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/games/hangMan"
+          element={
+            <ProtectedRoute user={user}>
+              <HandMan/>
             </ProtectedRoute>
           }
         />
