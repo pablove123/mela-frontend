@@ -1,0 +1,15 @@
+.gameList{
+  height: 100px;
+  margin-left: 50px;
+  width: 100px;
+  background-color: aliceblue;
+}
+
+a:visited{
+  text-decoration: none;
+}
+
+.list{
+  display: flex;
+  flex-direction: column;
+}
