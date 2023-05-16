@@ -7,6 +7,7 @@ const EntryDetails = (props) => {
 
   const [entry, setEntry] = useState(null)
   const {id} = useParams
+
   useEffect(() => {
     const fetchExperience = async () => {
       const data = await entryService.show(id)
@@ -19,7 +20,7 @@ const EntryDetails = (props) => {
   return (
     <>
       <h1>This is entry details</h1> 
-      <p>{entry.mood}</p>
+      
     </>
     );
 } 

@@ -123,7 +123,7 @@ const App = () => {
           }
         />
         <Route
-        path="/moods/entry/:id"
+        path="entry/:id"
         element={
           <ProtectedRoute user={user}>
             <EntryDetails  handleDeleteEntry={handleDeleteEntry}/>

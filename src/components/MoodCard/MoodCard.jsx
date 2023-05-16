@@ -1,4 +1,7 @@
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom"
+import styles from "./MoodCard.module.css"
+
 const MoodCard = (props) => {
 
   const { id } = useParams()
@@ -21,11 +24,15 @@ const MoodCard = (props) => {
 
   return ( 
     <>
+      <Link to={`/entry/${props.entry._id}`}>
     {!date}
-      <h1>Entry: {date}</h1> 
-      <p>Mood:{props.entry.feeling}</p>
-      <p>Notes: {props.entry.notes}</p>
-      <p><button  onClick={() => props.handleDeleteExperience(id)}>Delete</button></p>
+      <article className={styles.moodcard}>
+        <h1>Entry: {date}</h1> 
+        <p>Mood:{props.entry.feeling}</p>
+        <p>Notes: {props.entry.notes}</p>
+        <p><button  onClick={() => props.handleDeleteExperience(id)}>Delete</button></p>
+      </article>
+      </Link>
     </>
     );
 }
