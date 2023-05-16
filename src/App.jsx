@@ -16,6 +16,7 @@ import Footer from './components/Footer/Footer'
 import TTT from './pages/TicTacToe/TicTacToe'
 import Guess from './pages/GuessTheNumber/GuessTheNumber'
 import HandMan from './pages/HangMan/HangMan'
+import EntryDetails from './pages/EntryDetails/EntryDetails'
 
 // components
 import NavBar from './components/NavBar/NavBar'
@@ -120,6 +121,14 @@ const App = () => {
               <NewEntry handleAddMoodEntry={handleAddMoodEntry}/>
             </ProtectedRoute>
           }
+        />
+        <Route
+        path="/moods/entry/:id"
+        element={
+          <ProtectedRoute user={user}>
+            <EntryDetails  handleDeleteEntry={handleDeleteEntry}/>
+          </ProtectedRoute>
+        }
         />
         <Route
           path="/games/ttt"

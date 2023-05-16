@@ -8,16 +8,6 @@ async function getAllEntries() {
   return await res.json()
 }
 
-// const getAllEntries = async ()=> {
-//   try {
-//     const res = await fetch(BASE_URL, {
-//       headers: { 'Authorization': `Bearer ${tokenService.getToken()}` },
-//     })
-//     return res.json()
-//   } catch (error) {
-//     console.log(error)
-//   }
-// }
 
 const show = async (id) => {
   try {
