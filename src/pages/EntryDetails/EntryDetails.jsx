@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import { useParams } from "react-router-dom"
 import { useState } from "react"
 import * as entryService from '../../services/entryService'
+import styles from "./EntryDetails.module.css"
 
 const EntryDetails = (props) => {
 
@@ -26,6 +27,9 @@ const EntryDetails = (props) => {
       <h1>This is entry details</h1> 
       <p>{entry.feeling}</p>
       <p>{entry.notes}</p>
+      <div className={styles.updateDelete}>
+              <button className={styles.deleteButton} onClick={() => props.handleDeleteEntry(id)}>Delete</button>
+      </div>
     </>
     );
 } 
