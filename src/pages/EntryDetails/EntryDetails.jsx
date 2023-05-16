@@ -6,7 +6,7 @@ import * as entryService from '../../services/entryService'
 const EntryDetails = (props) => {
 
   const [entry, setEntry] = useState(null)
-  const {id} = useParams
+  const {id} = useParams()
 
   useEffect(() => {
     const fetchExperience = async () => {
@@ -17,10 +17,15 @@ const EntryDetails = (props) => {
   }, [id])
 
 
+  if (!entry) return <h1>Loading...</h1>
+
+  console.log(entry)
+  console.log(id)
   return (
     <>
       <h1>This is entry details</h1> 
-      
+      <p>{entry.feeling}</p>
+      <p>{entry.notes}</p>
     </>
     );
 } 
