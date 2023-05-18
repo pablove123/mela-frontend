@@ -8,7 +8,7 @@ function Moods (props) {
 
   return ( 
     <>
-      <h1>This is Moods List</h1>
+      <h1>Mood Entries</h1>
       <button><a href="/moods/entry">Click here to add new entry</a></button>
       {props.entries.map((entry)=> (
         <MoodCard key={entry.id} entry={entry} date={entry.createdAt} />

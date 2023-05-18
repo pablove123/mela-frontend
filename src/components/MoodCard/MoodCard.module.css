@@ -1,3 +1,14 @@
 .moodcard{
   border: 1px solid black;
+  height: 100px;
+  margin-left: 10px;
+  width: 200px;
+  background-color: #044389;
+  color: aliceblue;
+  margin-top: 20px;
+}
+
+.moodcard>a:visited{
+  text-decoration: none;
+  color: aliceblue;
 }

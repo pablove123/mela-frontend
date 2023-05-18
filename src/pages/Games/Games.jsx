@@ -4,7 +4,7 @@ import GameCard from '../../components/GameCard/GameCard';
 const Games = (props) => {
   return (
     <>
-      <h1>Games List</h1>
+      <h1 className={styles.gameTitle} >Games List</h1>
     <div className={styles.list}>
 
       <p ><button className={styles.gameList} ><a href="/games/ttt">TicTacToe</a></button></p>

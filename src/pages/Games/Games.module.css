@@ -2,14 +2,20 @@
   height: 100px;
   margin-left: 50px;
   width: 100px;
-  background-color: aliceblue;
+  background-color: #044389;
+  color: aliceblue;
 }
 
-a:visited{
+.gameList>a:visited{
   text-decoration: none;
+  color: aliceblue;
 }
 
 .list{
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.gameTitle{
+  text-align: center;
 }
