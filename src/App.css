@@ -1,0 +1,10 @@
+.soon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:50px ;
+}
+
+.construction{
+  width: 300px;;
+}

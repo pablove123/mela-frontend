@@ -25,10 +25,10 @@ const EntryDetails = (props) => {
   return (
     <>
       <h1>This is entry details</h1> 
-      <p>{entry.feeling}</p>
-      <p>{entry.notes}</p>
+      <p>Feeling: {entry.feeling}</p>
+      <p>Notes: {entry.notes}</p>
       <div className={styles.updateDelete}>
-              <button className={styles.deleteButton} onClick={() => props.handleDeleteEntry(id)}>Delete</button>
+              <button className={styles.deleteButton} onClick={() => props.handleDeleteEntry(id)}>Delete Entry</button>
       </div>
     </>
     );

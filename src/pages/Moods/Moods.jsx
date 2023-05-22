@@ -1,6 +1,7 @@
 import MoodCard from "../../components/MoodCard/MoodCard";
 import GameCard from "../../components/GameCard/GameCard";
 import { useState } from "react";
+import styles from "./Moods.module.css"
 
 function Moods (props) {
 
@@ -9,7 +10,7 @@ function Moods (props) {
   return ( 
     <>
       <h1>Mood Entries</h1>
-      <button><a href="/moods/entry">Click here to add new entry</a></button>
+      <button className={styles.moodButton}><a href="/moods/entry">Click here to add new entry</a></button>
       {props.entries.map((entry)=> (
         <MoodCard key={entry.id} entry={entry} date={entry.createdAt} />
       ))}

@@ -3,9 +3,9 @@ const TTT = (props) => {
   
   return ( 
   <>
-  <h1>Tic-Tac-Toe</h1>
+  <h1 className='soon'>Feature Coming Soon </h1>
 
-	<h3>Click a square:</h3>
+	{/* <h3>Click a square:</h3>
 
 	<section class="board">
 		<div class="sqr" id="sq0"></div>
@@ -19,7 +19,7 @@ const TTT = (props) => {
 		<div class="sqr" id="sq8"></div>
 	</section>  
 
-	<button id="reset"> Reset Game</button>  
+	<button id="reset"> Reset Game</button>   */}
   </> );
 }
 
