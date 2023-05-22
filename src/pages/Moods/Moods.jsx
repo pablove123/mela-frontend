@@ -9,11 +9,13 @@ function Moods (props) {
 
   return ( 
     <>
-      <h1>Mood Entries</h1>
-      <button className={styles.moodButton}><a href="/moods/entry">Click here to add new entry</a></button>
+      <h1 className={styles.entryHeader}>Mood Entries</h1>
+      <button className={styles.moodButton}><a href="/moods/entry">New entry</a></button>
+      <div className={styles.moodCards}>
       {props.entries.map((entry)=> (
         <MoodCard key={entry.id} entry={entry} date={entry.createdAt} />
       ))}
+      </div>
     </>
     );
 }
