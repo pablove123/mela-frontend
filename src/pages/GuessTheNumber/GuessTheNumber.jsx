@@ -30,19 +30,20 @@ function GuessTheNumber() {
   }
 
   return (
-    <div>
+    <div className={styles.guessDiv}>
       <h1>Guess the Number Game</h1>
       <p className={styles.message}>{message}</p>
       <p className={styles.message}>Previous Guess: {currentGuess}</p>
-      <form className={styles.message} onSubmit={handleGuess}>
+      <form  onSubmit={handleGuess}>
         <input
+        className={styles.guessBox}
           type="number"
           value={guess}
           onChange={(e) => setGuess(e.target.value)}
         />
-        <button type="submit">Guess</button>
+        <button className={styles.guessButton} type="submit">Guess</button>
       </form>
-      <h2>It took you {tries} guesses </h2>
+      {/* <h2>It took you {tries} guesses </h2> */}
     </div>
   );
 }
