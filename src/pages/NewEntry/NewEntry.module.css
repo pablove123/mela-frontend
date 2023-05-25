@@ -1,6 +1,7 @@
 .newHeader{
   text-align: center;
-  margin-top: 20%;
+  margin-top: 10%;
+  font-size: 30px;
 }
 .newEntryDiv{
   margin-top: 20px;
@@ -23,4 +24,14 @@
   background-color: #fd4047;
   color: whitesmoke;
   font-size: 20px;
+}
+.newEntryBorder{
+  border: 2px dotted black;
+  margin-top: 30%;
+  padding-bottom: 20px;
+}
+
+.newEntryNotes{
+  line-height: 30px;
+  text-align: center;
 }

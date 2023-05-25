@@ -18,6 +18,8 @@ const NewEntry = (props) => {
 
   return ( 
     <>
+    <div className={styles.newEntryBorder}>
+
       <header className={styles.newHeader}>Add a new Mood entry</header>
       <form onSubmit={handleSubmit}>
         <div className={styles.newEntryDiv}>
@@ -28,7 +30,7 @@ const NewEntry = (props) => {
             id="feeling-input"
             value={form.feeling}
             onChange={handleChange}
-          >
+            >
             <option value="Happy">Happy</option>
             <option value="Sad">Sad</option>
             <option value="Angry">Angry</option>
@@ -40,6 +42,7 @@ const NewEntry = (props) => {
         <div className={styles.newEntryDiv}>
           <label  htmlFor="notes-input">Notes:</label>
           <input
+          className={styles.newEntryNotes}
           required
           type="text"
           name="notes"
@@ -51,6 +54,7 @@ const NewEntry = (props) => {
         </div>
         <button  className={styles.newEntryButton} type="submit">SUBMIT</button>
       </form>
+    </div>
     </>
     );
 
