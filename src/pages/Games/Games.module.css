@@ -1,9 +1,14 @@
 .gameList{
-  height: 100px;
-  margin-left: 50px;
-  width: 100px;
+  border: 1px solid black;
+  height: 150px;
+  text-align: center;
+  margin-left: 30px;
+  width: 150px;
   background-color: #044389;
   color: aliceblue;
+  margin-top: 20px;
+  border-radius: 10px;
+  font-size: large;
 }
 
 .gameList>a:visited{
