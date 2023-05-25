@@ -1,0 +1,26 @@
+.newHeader{
+  text-align: center;
+  margin-top: 20%;
+}
+.newEntryDiv{
+  margin-top: 20px;
+  text-align: center;
+}
+.newEntryDiv:last-of-type{
+  margin-top: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.newEntryButton{
+  align-items: center;
+  text-align: center;
+  position: relative;
+  left: 35%;
+  width: 30%;
+  height: 50px;
+  border-radius: 15px;
+  background-color: #fd4047;
+  color: whitesmoke;
+  font-size: 20px;
+}
